@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanunlar Karşılaştırması</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            background: linear-gradient(135deg, #2f2f2f, #2f2f2f);
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .btn {
+            background: linear-gradient(135deg, #5f77ff, #3f4b8f);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: linear-gradient(135deg, #5f77ff, #3f4b8f);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-slate-800">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center mb-8">Eski Çağ Kanunları</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="card p-6">
+                <h2 class="text-2xl font-semibold mb-4">Urgakina Kanunları</h2>
+                <p class="mb-4">Urgakina Kanunları hakkında bilgiler</p>
+                <a href="urgakina.html" class="btn">Detaylar <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+            <div class="card p-6">
+                <h2 class="text-2xl font-semibold mb-4">Hamburabi Kanunları</h2>
+                <p class="mb-4">Hamburabi Kanunları hakkında bilgiler</p>
+                <a href="hamburabi.html" class="btn">Detaylar <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+            <div class="card p-6">
+                <h2 class="text-2xl font-semibold mb-4">Roma Kanunları</h2>
+                <p class="mb-4">Roma Kanunları hakkında bilgiler</p>
+                <a href="roma.html" class="btn">Detaylar <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+            <div class="card p-6">
+                <h2 class="text-2xl font-semibold mb-4">Türkistan Kanunları</h2>
+                <p class="mb-4">Türkistan Kanunları hakkında bilgiler</p>
+                <a href="turkistan.html" class="btn">Detaylar <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <a href="karsilastirma.html" class="btn">Karşılaştırma Sayfası <i class="fas fa-balance-scale ml-2"></i></a>
+        </div>
+    </div>
+</body>
+</html>
