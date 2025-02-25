@@ -3,106 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanunların Karşılaştırması</title>
+    <title>Antik Hukuk Karşılaştırması</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #2f2f2f, #2f2f2f);
+            background: linear-gradient(-45deg, #2f2f2f, #1a1a1a, #2c3e50, #3498db);
+            background-size: 400% 400%;
             color: #fff;
+            animation: gradientBG 15s ease infinite;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .btn-glow {
+            background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+            transition: all 0.3s ease;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center">
-    <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold text-center mb-8">Kanunların Karşılaştırması</h1>
-        <div class="bg-gray-800 rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
-            <!-- Resim Eklendi -->
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.i01kpBWBl5A8BVasmpwbNAHaDt%26pid%3DApi&f=1&ipt=221dc8f9f909b5e82052797874398f6a8468fd6b45f159f444d9b627820f528b&ipo=images" alt="Türkistan Kanunları" class="w-full h-64 object-cover rounded-lg mb-4">
-            
-            <!-- 1. Köken ve Tarihsel Bağlam -->
-            <h1 class="mb-1">
-                <strong>1. Köken ve Tarihsel Bağlam</strong>
-            </h1>
-            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700">
-            <p class="mb-1"><strong>Urgakina Kanunları: </strong>Sümer Kralı Urgakina tarafından oluşturulan bu kanunlar, tarihte bilinen ilk yazılı kanunlardır. Sümer toplumunda sosyal reformlar yapmayı, din adamlarının ve zenginlerin halk üzerindeki baskısını azaltmayı ve mülkiyet haklarını korumayı amaçlamıştır.</p>
-            <br>
-            <p class="mb-1"><strong>Hammurabi Kanunları: </strong>Babil Kralı Hammurabi tarafından oluşturulan bu kanunlar, kısasa kısas ilkesine dayanır. Toplumu sınıflara ayırarak farklı cezalar öngörmüştür.</p>
-            <br>
-            <p class="mb-1"><strong>12 Levha Kanunları: </strong>Roma Cumhuriyeti döneminde soylular ve halk arasındaki hukuki eşitsizlikleri azaltmak amacıyla oluşturulmuştur. Roma hukukunun temelini atmıştır.</p>
-            <br>
-            <p class="mb-1"><strong>Türkistan Kanunları: </strong>Yazılı olmayan bu hukuk sistemi, Gök Tanrı inancına dayanır ve kurultaylarda belirlenmiştir. Eşit suça eşit ceza ilkesi benimsenmiştir.</p>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <h1 class="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent animate__animated animate__fadeInDown">
+            Antik Hukuk Sistemleri Karşılaştırması
+        </h1>
 
-            <!-- 2. Temel Amaçlar -->
-            <h1 class="mb-1 mt-8">
-                <strong>2. Temel Amaçlar</strong>
-            </h1>
-            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700">
-            <p class="mb-1"><strong>Urgakina Kanunları: </strong>Sosyal adaleti sağlamak, din adamlarının ve zenginlerin halk üzerindeki baskısını kırmak ve mülkiyet haklarını korumak.</p>
-            <br>
-            <p class="mb-1"><strong>Hammurabi Kanunları: </strong>Toplumsal düzeni sağlamak, suç ve cezaları belirlemek, sınıflar arasındaki ilişkileri düzenlemek.</p>
-            <br>
-            <p class="mb-1"><strong>12 Levha Kanunları: </strong>Hukuki eşitliği sağlamak, yazılı kurallarla keyfi uygulamaları engellemek ve Roma toplumunu düzenlemek.</p>
-            <br>
-            <p class="mb-1"><strong>Türkistan Kanunları: </strong>Toplumsal düzeni korumak, adaleti sağlamak ve Türk devletlerinin uzun ömürlü olmasını desteklemek.</p>
+        <div class="max-w-7xl mx-auto card p-8" data-aos="zoom-in">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com/vectors/ancient-scrolls-vector-id165806878%3Fk%3D6%26m%3D165806878%26s%3D612x612%26w%3D0%26h%3DvBkD5s4Gj0wV8Jw3XjJ7q9Z9XxgQ8Y9j6jK9j7J9x3o%3D&f=1&nofb=1&ipt=6a5dfaacd3a2f3b5c5e5d5c5e5d5c5e5d5c5e5d5c5e5d5c5e5d5c5e5d5c5e5d5c5e5d5c5e5d&ipo=images" 
+                 alt="Hukuk Karşılaştırma" 
+                 class="w-full h-96 object-cover rounded-xl mb-8 shadow-xl">
 
-            <!-- 3. Hukuk Anlayışı ve Cezalar -->
-            <h1 class="mb-1 mt-8">
-                <strong>3. Hukuk Anlayışı ve Cezalar</strong>
-            </h1>
-            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700">
-            <p class="mb-1"><strong>Urgakina Kanunları: </strong>Daha çok sosyal reformlara odaklanmıştır. Tarım toplumu oldukları için tarımla ilgili kurallar ön plandadır. Örneğin, tarla sürmemenin veya saban kırmanın cezası ağırdır. Cezalar genellikle fidye şeklindedir.</p>
-            <br>
-            <p class="mb-1"><strong>Hammurabi Kanunları: </strong>Kısasa kısas ilkesi benimsenmiştir. Suçlar ve cezalar, toplumsal sınıflara göre farklılık gösterir. Örneğin, asillere yapılan haksızlıklar daha ağır cezalandırılır.</p>
-            <br>
-            <p class="mb-1"><strong>12 Levha Kanunları: </strong>Yazılı kurallarla adaleti sağlamayı amaçlar. Cezalar, suçun niteliğine göre belirlenir. Örneğin, borçlular köle durumuna düşebilir, ancak bu uygulama sınırlandırılmıştır.</p>
-            <br>
-            <p class="mb-1"><strong>Türkistan Kanunları: </strong>Eşit suça eşit ceza ilkesi vardır. Kurallar yazılı değildir ve toplumun geleneklerine göre şekillenir. Cezalar, toplumun barışını korumaya yöneliktir.</p>
+            <!-- Köken ve Tarihsel Bağlam -->
+            <div class="space-y-6" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4 text-blue-300">🌍 Köken ve Tarihsel Bağlam</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                        <h3 class="text-lg font-semibold text-blue-400 mb-2">Urgakina</h3>
+                        <p class="text-gray-300 text-sm">MÖ 3000 • Sümerler • İlk yazılı kanunlar</p>
+                    </div>
+                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                        <h3 class="text-lg font-semibold text-purple-400 mb-2">Hammurabi</h3>
+                        <p class="text-gray-300 text-sm">MÖ 1750 • Babil • Kısas prensibi</p>
+                    </div>
+                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                        <h3 class="text-lg font-semibold text-amber-400 mb-2">12 Levha</h3>
+                        <p class="text-gray-300 text-sm">MÖ 451 • Roma • Hukuki eşitlik</p>
+                    </div>
+                    <div class="p-4 bg-gray-700/50 rounded-lg">
+                        <h3 class="text-lg font-semibold text-green-400 mb-2">Türkistan</h3>
+                        <p class="text-gray-300 text-sm">Sözlü gelenek • Töre hukuku</p>
+                    </div>
+                </div>
+            </div>
 
-            <!-- 4. Toplumsal Etkileri -->
-            <h1 class="mb-1 mt-8">
-                <strong>4. Toplumsal Etkileri</strong>
-            </h1>
-            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700">
-            <p class="mb-1"><strong>Urgakina Kanunları: </strong>Din adamlarının ve zenginlerin halk üzerindeki baskısını azaltmış, mülkiyet haklarını güvence altına almıştır. Ancak, ağır cezalar içermemesi nedeniyle daha çok reform niteliğindedir.</p>
-            <br>
-            <p class="mb-1"><strong>Hammurabi Kanunları: </strong>Toplumsal sınıflar arasındaki eşitsizliği korumuş, ancak yazılı kurallarla adaleti sağlamaya çalışmıştır. Kısasa kısas ilkesi, adaletin sert bir şekilde uygulandığını gösterir.</p>
-            <br>
-            <p class="mb-1"><strong>12 Levha Kanunları: </strong>Roma toplumunda hukuki eşitliği sağlamaya çalışmış, ancak patriciler ve plebler arasındaki eşitsizlik tamamen ortadan kaldırılamamıştır. Yazılı hukuk, keyfi uygulamaları engellemiştir.</p>
-            <br>
-            <p class="mb-1"><strong>Türkistan Kanunları: </strong>Türk toplumunda birlik ve beraberliği sağlamış, devletin uzun ömürlü olmasına katkıda bulunmuştur. Kurultaylarda belirlenen kurallar, toplumsal uzlaşmayı yansıtır.</p>
+            <!-- Temel Amaçlar -->
+            <div class="space-y-6 mt-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4 text-blue-300">🎯 Temel Amaçlar</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 bg-gray-700/50 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="w-1/4">
+                                <div class="h-12 w-12 bg-blue-500/20 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-balance-scale text-blue-400"></i>
+                                </div>
+                            </div>
+                            <div class="w-3/4">
+                                <h3 class="text-xl font-semibold text-blue-400">Sosyal Adalet</h3>
+                                <p class="text-gray-300 mt-2">Urgakina ve Türkistan'da ön planda</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gray-700/50 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="w-1/4">
+                                <div class="h-12 w-12 bg-purple-500/20 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-gavel text-purple-400"></i>
+                                </div>
+                            </div>
+                            <div class="w-3/4">
+                                <h3 class="text-xl font-semibold text-purple-400">Sınıfsal Düzen</h3>
+                                <p class="text-gray-300 mt-2">Hammurabi ve 12 Levha'da belirgin</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <!-- 5. Benzerlikler ve Farklılıklar -->
-            <h1 class="mb-1 mt-8">
-                <strong>5. Benzerlikler ve Farklılıklar</strong>
-            </h1>
-            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700">
-            <p class="mb-1"><strong>Benzerlikler:</strong></p>
-            <ul class="list-disc ml-6">
-                <li>Hepsi toplumsal düzeni sağlamayı ve adaleti tesis etmeyi amaçlar.</li>
-                <li>Mülkiyet hakları ve ceza hukuku, tüm hukuk sistemlerinde önemli bir yer tutar.</li>
-                <li>Toplumsal eşitsizliklerle mücadele etme çabaları görülür.</li>
-            </ul>
-            <br>
-            <p class="mb-1"><strong>Farklılıklar:</strong></p>
-            <ul class="list-disc ml-6">
-                <li>Urgakina Kanunları daha çok sosyal reformlara odaklanırken, Hammurabi Kanunları kısasa kısas ilkesini benimser.</li>
-                <li>12 Levha Kanunları yazılı hukukun önemini vurgularken, Töre Hukuku sözlü geleneklere dayanır.</li>
-                <li>Urgakina Kanunları fidye cezalarını öngörürken, Hammurabi Kanunları daha sert cezalar içerir.</li>
-            </ul>
+            <!-- Hukuk Anlayışı -->
+            <div class="space-y-6 mt-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4 text-blue-300">⚖️ Hukuk Yaklaşımları</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 bg-gray-700/50 rounded-xl">
+                        <h3 class="text-xl font-semibold text-blue-400 mb-4">Yazılı vs Sözlü</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-300">📜 Urgakina</span>
+                            <span class="text-gray-400">vs</span>
+                            <span class="text-green-300">🗣️ Türkistan</span>
+                        </div>
+                        <hr class="my-4 border-gray-600">
+                        <p class="text-gray-300">Yazılı hukuk geleneği ile sözlü töre sisteminin karşılaştırması</p>
+                    </div>
+                    <div class="p-6 bg-gray-700/50 rounded-xl">
+                        <h3 class="text-xl font-semibold text-purple-400 mb-4">Cezalandırma</h3>
+                        <div class="flex flex-col space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-purple-300">Hammurabi</span>
+                                <span class="text-gray-400">Kısas</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-amber-300">12 Levha</span>
+                                <span class="text-gray-400">Fidye</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benzerlik ve Farklılıklar -->
+            <div class="space-y-6 mt-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4 text-blue-300">🔍 Benzerlikler & Farklılıklar</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 bg-blue-500/10 rounded-xl">
+                        <h3 class="text-xl font-semibold text-blue-400 mb-4">🟢 Ortak Noktalar</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Toplumsal düzen vurgusu</li>
+                            <li>Mülkiyet haklarının korunması</li>
+                            <li>Güçlü sınıf kontrol mekanizmaları</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-purple-500/10 rounded-xl">
+                        <h3 class="text-xl font-semibold text-purple-400 mb-4">🔴 Farklılıklar</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li>Uygulama yöntemleri (Yazılı/Sözlü)</li>
+                            <li>Cezalandırma felsefeleri</li>
+                            <li>Toplumsal sınıf yaklaşımları</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
             <!-- Geri Dön Butonu -->
-            <div class="mt-8">
-                <a href="/tarihprojesi" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">
-                    Geri Dön <i class="fas fa-arrow-left ml-2"></i>
+            <div class="mt-12 text-center" data-aos="fade-up">
+                <a href="/tarihprojesi" class="btn-glow inline-block py-3 px-8 rounded-lg font-semibold transform transition hover:scale-105">
+                    <i class="fas fa-arrow-left mr-2"></i>Ana Sayfaya Dön
                 </a>
             </div>
         </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000,
+            easing: 'ease-out-quad'
+        });
+    </script>
 </body>
 </html>
