@@ -3,83 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12 Levha Kanunları</title>
+    <title>12 Levha Kanunları - Kapsamlı Analiz</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #2f2f2f, #2f2f2f);
+            background: linear-gradient(-45deg, #2f2f2f, #1a1a1a, #2c3e50, #3498db);
+            background-size: 400% 400%;
             color: #fff;
+            animation: gradientBG 15s ease infinite;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .btn-glow {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            transition: all 0.3s ease;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center">
-    <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold text-center mb-8">12 Levha Kanunları</h1>
-        
-        <div class="bg-gray-800 rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.rap43BzseeBa_EBjzPr-sgHaEA%26pid%3DApi&f=1&ipt=ec7284995e36a6cc6d406625d02edb772cb5bd6202ea0138241c264f23c37540&ipo=images" 
-                 alt="12 Levha Kanunları Temsili Görsel" 
-                 class="w-full h-64 object-cover rounded-lg mb-6">
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <h1 class="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent animate__animated animate__fadeInDown">
+            12 Levha Kanunları
+        </h1>
 
-            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <!-- Giriş ve Tarihsel Bağlam -->
+            <div class="card p-8" data-aos="zoom-in">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.rap43BzseeBa_EBjzPr-sgHaEA%26pid%3DApi&f=1&ipt=ec7284995e36a6cc6d406625d02edb772cb5bd6202ea0138241c264f23c37540&ipo=images" 
+                     alt="12 Levha Kanunları Temsili Görsel" 
+                     class="w-full h-96 object-cover rounded-xl shadow-2xl mb-8">
 
-            <h2 class="text-2xl font-semibold mb-4 text-amber-400">Tarihsel Köken</h2>
-            <p class="mb-4">
-                ✓ MÖ 451-450'de Roma Cumhuriyeti'nde oluşturuldu<br>
-                ✓ Bronz/tahta levhalara yazılıp Forum'da sergilendi<br>
-                ✓ Soylular ile halk arasındaki eşitsizliği azaltma amacı
-            </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-4" data-aos="fade-right">
+                        <h2 class="text-3xl font-bold text-amber-300">📜 Tarihsel Arka Plan</h2>
+                        <div class="p-6 bg-gray-700/50 rounded-xl">
+                            <p class="text-gray-300 leading-relaxed">
+                                MÖ 5. yüzyıl Roma'sında patrici-pleb çatışmasının doruk noktasında, 
+                                toplumsal adaleti sağlamak amacıyla oluşturulan 12 Levha Kanunları, 
+                                yazılı hukuk geleneğinin ilk örneklerinden biri olarak kabul edilir. 
+                                Decemviri adı verilen 10 kişilik komisyon tarafından hazırlanan kanunlar, 
+                                Roma Forumu'nda bronz levhalar üzerinde sergilenerek kamusallık ilkesinin 
+                                temellerini atmıştır.
+                            </p>
+                        </div>
+                    </div>
 
-            <h2 class="text-2xl font-semibold mb-4 text-amber-400">Temel İçerik</h2>
-            <div class="space-y-3 mb-6">
-                <div class="flex items-start">
-                    <span class="text-amber-300 mr-2">•</span>
-                    <p>Aile hukuku: Pater familias'ın mutlak otoritesi</p>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-amber-300 mr-2">•</span>
-                    <p>Mülkiyet ve miras haklarının detaylı düzenlemeleri</p>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-amber-300 mr-2">•</span>
-                    <p>Borçlar hukuku: Köleleştirme uygulaması sınırlamaları</p>
-                </div>
-            </div>
-
-            <h2 class="text-2xl font-semibold mb-4 text-amber-400">Sınırlılıklar</h2>
-            <p class="mb-4">
-                ✓ Tam eşitlik sağlanamadı<br>
-                ✓ Patrici-Pleb ayrımı devam etti<br>
-                ✓ Dini kuralların hukukla iç içe geçmiş olması
-            </p>
-
-            <h2 class="text-2xl font-semibold mb-4 text-amber-400">Tarihsel Miras</h2>
-            <div class="space-y-3">
-                <div class="flex items-start">
-                    <span class="text-amber-300 mr-2">•</span>
-                    <p>Yazılı hukuk geleneğinin başlangıcı</p>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-amber-300 mr-2">•</span>
-                    <p>Modern Batı hukuk sistemlerinin temeli</p>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-amber-300 mr-2">•</span>
-                    <p>Hukukun üstünlüğü ilkesinin erken örneği</p>
+                    <div class="space-y-4" data-aos="fade-left">
+                        <h2 class="text-3xl font-bold text-amber-300">⚖️ Temel Prensipler</h2>
+                        <div class="p-6 bg-gray-700/50 rounded-xl">
+                            <ul class="list-disc list-inside space-y-3 text-gray-300">
+                                <li>Lex scripta (Yazılı hukuk) ilkesi</li>
+                                <li>Eşitlik idealinin hukuki ifadesi</li>
+                                <li>Hukukun üstünlüğü anlayışı</li>
+                                <li>Kamuoyuna açıklık (Publicitas)</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="mt-8">
-                <a href="/tarihprojesi" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">
-                    Geri Dön <i class="fas fa-arrow-left ml-2"></i>
-                </a>
+            <!-- Detaylı İçerik Bölümleri -->
+            <div class="card p-8" data-aos="fade-up">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Hukuki Yenilikler -->
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold text-amber-300">🆕 Devrimsel Hükümler</h2>
+                        <div class="p-6 bg-gray-700/50 rounded-xl">
+                            <div class="space-y-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-amber-400">Aile Hukuku</h3>
+                                    <p class="text-gray-300 mt-2">
+                                        • Pater familias'ın sınırsız yetkilerinin düzenlenmesi<br>
+                                        • Evlilik tiplerinin (cum manu/sine manu) tanımlanması<br>
+                                        • Kadınların mal varlığı üzerindeki sınırlı haklar
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-amber-400">Mülkiyet</h3>
+                                    <p class="text-gray-300 mt-2">
+                                        • Mancipatio ile resmi devir işlemleri<br>
+                                        • Servitutes (irtifak hakları) düzenlemeleri<br>
+                                        • Miras hukukunda agnatik sistem
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sınırlılıklar -->
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold text-amber-300">⚠️ Eleştiriler ve Eksiklikler</h2>
+                        <div class="p-6 bg-gray-700/50 rounded-xl">
+                            <div class="space-y-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-amber-400">Toplumsal</h3>
+                                    <p class="text-gray-300 mt-2">
+                                        • Pleblerin siyasi katılım sınırlamaları<br>
+                                        • Kölelerin hukuki statü eksikliği<br>
+                                        • Cinsiyet temelli eşitsizlikler
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-amber-400">Hukuki</h3>
+                                    <p class="text-gray-300 mt-2">
+                                        • Ceza hukuku eksikliği<br>
+                                        • Formülcü dava sistemi<br>
+                                        • Pontifexlerin yorum tekelinin devamı
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarihsel Etki ve Miras -->
+            <div class="card p-8" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-amber-300 mb-8">🌍 Evrensel Hukuk Mirası</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-6 bg-gray-700/50 rounded-xl">
+                        <h3 class="text-xl font-semibold text-amber-400">Antik Çağ Etkileri</h3>
+                        <p class="text-gray-300 mt-4 leading-relaxed">
+                            • Helenistik hukuk sistemleriyle etkileşim<br>
+                            • Doğal hukuk (ius naturale) kavramının tohumları<br>
+                            • Roma İmparatorluğu'nun hukuki altyapısı
+                        </p>
+                    </div>
+                    
+                    <div class="p-6 bg-gray-700/50 rounded-xl">
+                        <h3 class="text-xl font-semibold text-amber-400">Modern Etkiler</h3>
+                        <p class="text-gray-300 mt-4 leading-relaxed">
+                            • Medeni hukuk kodifikasyonları<br>
+                            • Kıta Avrupası hukuk geleneği<br>
+                            • Uluslararası ticaret hukukunun temelleri<br>
+                            • Anayasal devlet anlayışı
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Geri Dön Butonu -->
+        <div class="mt-12 text-center" data-aos="fade-up">
+            <a href="/tarihprojesi" class="btn-glow inline-block py-4 px-8 rounded-xl font-bold text-lg relative overflow-hidden transform transition hover:scale-105">
+                <i class="fas fa-arrow-left mr-2"></i>Ana Sayfaya Dön
+            </a>
+        </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000,
+            easing: 'ease-out-quad',
+            offset: 120
+        });
+    </script>
 </body>
 </html>
