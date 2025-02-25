@@ -3,66 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanunlar Karşılaştırması</title>
+    <title>Antik Kanunlar Karşılaştırması</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #2f2f2f, #1a1a1a, #2c3e50, #3498db);
+            background-size: 400% 400%;
             color: #fff;
-            background: linear-gradient(135deg, #2f2f2f, #2f2f2f);
+            animation: gradientBG 15s ease infinite;
         }
         .card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            transition: transform 0.3s ease;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
         .card:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px) scale(1.03) rotateX(2deg) rotateY(2deg);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
         }
-        .btn {
-            background: linear-gradient(135deg, #5f77ff, #3f4b8f);
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, transparent 20%, rgba(255,255,255,0.1) 50%);
+            border-radius: 15px;
+            pointer-events: none;
         }
-        .btn:hover {
-            background: linear-gradient(135deg, #5f77ff, #3f4b8f);
+        .btn-glow {
+            background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .btn-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+        }
+        .btn-glow::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: btnShine 3s infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes btnShine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
         }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center bg-slate-800">
-    <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold text-center mb-8">Eski Çağ Kanunları</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="card p-6">
-                <h2 class="text-2xl font-semibold mb-4">Urgakina Kanunları</h2>
-                <p class="mb-4">Urgakina Kanunları hakkında bilgiler</p>
-                <a href="/tarihprojesi/urgakina" class="btn">Detaylar <i class="fas fa-arrow-right ml-2"></i></a>
+<body class="min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4 py-12">
+        <h1 class="text-5xl font-bold text-center mb-12 animate__animated animate__fadeInDown bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Antik Hukuk Sistemleri
+        </h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-aos="fade-up" data-aos-duration="1000">
+            <!-- Urgakina Card -->
+            <div class="card p-6 hover:!transform hover:!scale-105" data-aos="zoom-in" data-aos-delay="100">
+                <div class="flex flex-col h-full">
+                    <h2 class="text-2xl font-bold mb-4 text-blue-300">Urgakina Kanunları</h2>
+                    <p class="mb-6 text-gray-300 flex-grow">Tarihin bilinen ilk yazılı kanunları, Sümer medeniyetinin adalet arayışı</p>
+                    <a href="/tarihprojesi/urgakina" class="btn-glow inline-block text-center py-3 px-6 rounded-lg font-semibold relative overflow-hidden">
+                        <span class="relative z-10">Keşfet <i class="fas fa-scroll ml-2"></i></span>
+                    </a>
+                </div>
             </div>
-            <div class="card p-6">
-                <h2 class="text-2xl font-semibold mb-4">Hamburabi Kanunları</h2>
-                <p class="mb-4">Hamburabi Kanunları hakkında bilgiler</p>
-                <a href="/tarihprojesi/hamburabi" class="btn">Detaylar <i class="fas fa-arrow-right ml-2"></i></a>
+
+            <!-- Hammurabi Card -->
+            <div class="card p-6 hover:!transform hover:!scale-105" data-aos="zoom-in" data-aos-delay="200">
+                <div class="flex flex-col h-full">
+                    <h2 class="text-2xl font-bold mb-4 text-purple-300">Hammurabi Kanunları</h2>
+                    <p class="mb-6 text-gray-300 flex-grow">"Göze göz" prensibiyle ünlü Babil'in devrimsel hukuk sistemi</p>
+                    <a href="/tarihprojesi/hamburabi" class="btn-glow inline-block text-center py-3 px-6 rounded-lg font-semibold relative overflow-hidden">
+                        <span class="relative z-10">Keşfet <i class="fas fa-gavel ml-2"></i></span>
+                    </a>
+                </div>
             </div>
-            <div class="card p-6">
-                <h2 class="text-2xl font-semibold mb-4">Roma Kanunları</h2>
-                <p class="mb-4">Roma Kanunları hakkında bilgiler</p>
-                <a href="/tarihprojesi/roma" class="btn">Detaylar <i class="fas fa-arrow-right ml-2"></i></a>
+
+            <!-- Roma Card -->
+            <div class="card p-6 hover:!transform hover:!scale-105" data-aos="zoom-in" data-aos-delay="300">
+                <div class="flex flex-col h-full">
+                    <h2 class="text-2xl font-bold mb-4 text-red-300">Roma Kanunları</h2>
+                    <p class="mb-6 text-gray-300 flex-grow">Modern hukukun temellerini atan antik Roma'nın hukuk mirası</p>
+                    <a href="/tarihprojesi/roma" class="btn-glow inline-block text-center py-3 px-6 rounded-lg font-semibold relative overflow-hidden">
+                        <span class="relative z-10">Keşfet <i class="fas fa-balance-scale ml-2"></i></span>
+                    </a>
+                </div>
             </div>
-            <div class="card p-6">
-                <h2 class="text-2xl font-semibold mb-4">Türkistan Kanunları</h2>
-                <p class="mb-4">Türkistan Kanunları hakkında bilgiler</p>
-                <a href="/tarihprojesi/turkistan" class="btn">Detaylar <i class="fas fa-arrow-right ml-2"></i></a>
+
+            <!-- Türkistan Card -->
+            <div class="card p-6 hover:!transform hover:!scale-105" data-aos="zoom-in" data-aos-delay="400">
+                <div class="flex flex-col h-full">
+                    <h2 class="text-2xl font-bold mb-4 text-green-300">Türkistan Kanunları</h2>
+                    <p class="mb-6 text-gray-300 flex-grow">Göçebe Türk kültürünün töre hukuku ve adalet anlayışı</p>
+                    <a href="/tarihprojesi/turkistan" class="btn-glow inline-block text-center py-3 px-6 rounded-lg font-semibold relative overflow-hidden">
+                        <span class="relative z-10">Keşfet <i class="fas fa-horse ml-2"></i></span>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="text-center mt-8">
-            <a href="/tarihprojesi/karsilastirma" class="btn">Karşılaştırma Sayfası <i class="fas fa-balance-scale ml-2"></i></a>
+
+        <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
+            <a href="/tarihprojesi/karsilastirma" class="btn-glow inline-block text-center py-4 px-8 rounded-xl font-bold text-lg relative overflow-hidden transform transition hover:scale-105">
+                <span class="relative z-10">Karşılaştır <i class="fas fa-exchange-alt ml-3 animate__animated animate__shakeX animate__infinite"></i></span>
+            </a>
         </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000,
+            easing: 'ease-out-quad'
+        });
+    </script>
 </body>
 </html>
