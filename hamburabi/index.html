@@ -5,84 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hammurabi Kanunları</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #2f2f2f, #2f2f2f);
+            background: linear-gradient(-45deg, #2f1a2f, #1a1a1a, #3e2c50, #8b5cf6);
+            background-size: 400% 400%;
             color: #fff;
+            animation: gradientBG 15s ease infinite;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .btn-glow {
+            background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+            transition: all 0.3s ease;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center">
-    <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold text-center mb-8">Hammurabi Kanunları</h1>
-        
-        <div class="bg-gray-800 rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <h1 class="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent animate__animated animate__fadeInDown">
+            Hammurabi Kanunları
+        </h1>
+
+        <div class="max-w-4xl mx-auto card p-8" data-aos="zoom-in">
             <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.YlZ_Xa5m-5DA9_cXbX7OcQHaDa%26pid%3DApi&f=1&ipt=c8de13bbd671bc63d7142405b6db579a36c2f67ae0516e255100447e25b091b7&ipo=images" 
-                 alt="Hammurabi Kanunları Steli" 
-                 class="w-full h-64 object-cover rounded-lg mb-6">
+                 alt="Hammurabi Steli" 
+                 class="w-full h-80 object-cover rounded-xl mb-8 shadow-xl">
 
-            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm">
-
-            <h2 class="text-2xl font-semibold mb-4 text-purple-400">Tarihsel Bağlam</h2>
-            <p class="mb-4">
-                ✓ MÖ 18. yüzyılda Babil Kralı Hammurabi tarafından oluşturuldu<br>
-                ✓ Akad dilinde taş stel üzerine kazındı<br>
-                ✓ Bilinen en eski yazılı hukuk sistemlerinden biri
-            </p>
-
-            <h2 class="text-2xl font-semibold mb-4 text-purple-400">Temel İlkeler</h2>
-            <div class="space-y-3 mb-6">
-                <div class="flex items-start">
-                    <span class="text-purple-300 mr-2">•</span>
-                    <p>"Göze göz, dişe diş" kısas prensibi</p>
+            <div class="space-y-8">
+                <!-- Tarihsel Bağlam -->
+                <div class="space-y-4" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-4 text-purple-300">🏛️ Tarihsel Köken</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-gray-300">
+                        <div class="p-4 bg-gray-700/50 rounded-lg">
+                            <p class="font-semibold text-purple-400">MÖ 1750</p>
+                            <p>Eski Babil Dönemi</p>
+                        </div>
+                        <div class="p-4 bg-gray-700/50 rounded-lg">
+                            <p class="font-semibold text-purple-400">📜 Yazıt</p>
+                            <p>Diorit Taş Stel</p>
+                        </div>
+                        <div class="p-4 bg-gray-700/50 rounded-lg">
+                            <p class="font-semibold text-purple-400">⚖️ Amaç</p>
+                            <p>"Adaleti Yeryüzüne Yaymak"</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-start">
-                    <span class="text-purple-300 mr-2">•</span>
-                    <p>Toplumsal sınıflara göre farklı cezalar (Asiller/Hürler/Köleler)</p>
+
+                <!-- Hukuk Prensipleri -->
+                <div class="space-y-4" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold mb-4 text-purple-300">⚔️ Kanun Felsefesi</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-gray-700/50 rounded-xl">
+                            <h3 class="text-xl font-semibold text-purple-400 mb-3">👁️ Lex Talionis</h3>
+                            <p class="text-gray-300">
+                                • "Göze göz" kısas prensibi<br>
+                                • Sosyal statüye göre ceza<br>
+                                • 282 madde sistemi
+                            </p>
+                        </div>
+                        <div class="p-6 bg-gray-700/50 rounded-xl">
+                            <h3 class="text-xl font-semibold text-purple-400 mb-3">👥 Toplum Yapısı</h3>
+                            <p class="text-gray-300">
+                                • Awilum (Asiller)<br>
+                                • Mushkenum (Hürler)<br>
+                                • Wardum (Köleler)
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-start">
-                    <span class="text-purple-300 mr-2">•</span>
-                    <p>Adaletin kamusal alanda teşhiri</p>
+
+                <!-- Hukuki Düzenlemeler -->
+                <div class="space-y-4" data-aos="fade-up">
+                    <h2 class="text-3xl font-bold mb-4 text-purple-300">📖 Hukuk Kapsamı</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="p-4 bg-purple-500/10 rounded-lg">
+                            <h3 class="text-lg font-semibold text-purple-300">💍 Aile</h3>
+                            <p class="text-gray-300">Evlilik ve boşanma kuralları</p>
+                        </div>
+                        <div class="p-4 bg-purple-500/10 rounded-lg">
+                            <h3 class="text-lg font-semibold text-purple-300">🏺 Ticaret</h3>
+                            <p class="text-gray-300">Alım-satım sözleşmeleri</p>
+                        </div>
+                        <div class="p-4 bg-purple-500/10 rounded-lg">
+                            <h3 class="text-lg font-semibold text-purple-300">⚰️ Miras</h3>
+                            <p class="text-gray-300">Mülkiyet devir kuralları</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarihsel Etki -->
+                <div class="space-y-4" data-aos="fade-up">
+                    <h2 class="text-3xl font-bold mb-4 text-purple-300">🌍 Tarihsel Miras</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-gray-700/50 rounded-xl">
+                            <h3 class="text-xl font-semibold text-purple-400 mb-3">📜 Yazılı Hukuk</h3>
+                            <p class="text-gray-300">
+                                • Kamuya açık kanun stelleri<br>
+                                • Yasal kesinlik ilkesi<br>
+                                • Babil hukuk okulları
+                            </p>
+                        </div>
+                        <div class="p-6 bg-gray-700/50 rounded-xl">
+                            <h3 class="text-xl font-semibold text-purple-400 mb-3">⚖️ Modern Etkiler</h3>
+                            <p class="text-gray-300">
+                                • Ceza hukuku temelleri<br>
+                                • Sosyal adalet tartışmaları<br>
+                                • Müzelerde sergilenen stel
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <h2 class="text-2xl font-semibold mb-4 text-purple-400">Hukuki Düzenlemeler</h2>
-            <p class="mb-4">
-                Kapsamı:<br>
-                <span class="block mt-2 ml-4">
-                    ✓ Aile hukuku (Evlilik, boşanma, miras)<br>
-                    ✓ Ticaret ve mülkiyet kuralları<br>
-                    ✓ Borçlar ve ceza hukuku
-                </span>
-            </p>
-
-            <h2 class="text-2xl font-semibold mb-4 text-purple-400">Toplumsal Yansımalar</h2>
-            <div class="space-y-3">
-                <div class="flex items-start">
-                    <span class="text-purple-300 mr-2">•</span>
-                    <p>Sosyal tabakalaşmanın hukuka yansıması</p>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-purple-300 mr-2">•</span>
-                    <p>Kadın haklarında sınırlı ilerlemeler</p>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-purple-300 mr-2">•</span>
-                    <p>Modern hukukun temel taşlarından biri kabul edilmesi</p>
-                </div>
-            </div>
-
-            <div class="mt-8">
-                <a href="/tarihprojesi" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">
-                    Geri Dön <i class="fas fa-arrow-left ml-2"></i>
+            <!-- Geri Dön Butonu -->
+            <div class="mt-12 text-center" data-aos="fade-up">
+                <a href="/tarihprojesi" class="btn-glow inline-block py-3 px-8 rounded-lg font-semibold transform transition hover:scale-105">
+                    <i class="fas fa-arrow-left mr-2"></i>Geri Dön
                 </a>
             </div>
         </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000,
+            easing: 'ease-out-quad'
+        });
+    </script>
 </body>
 </html>
