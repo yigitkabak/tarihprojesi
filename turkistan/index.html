@@ -3,86 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Türkistan Kanunları</title>
+    <title>Türkistan Töre Hukuku</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #2f2f2f, #2f2f2f);
+            background: linear-gradient(-45deg, #1a2f1a, #2f2f2f, #1a381a, #2c502c);
+            background-size: 400% 400%;
             color: #fff;
+            animation: gradientBG 15s ease infinite;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .btn-glow {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            transition: all 0.3s ease;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center">
-    <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold text-center mb-8">Türkistan Kanunları</h1>
-        
-        <div class="bg-gray-800 rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <h1 class="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent animate__animated animate__fadeInDown">
+            Türkistan Töre Hukuku
+        </h1>
+
+        <div class="max-w-4xl mx-auto card p-8" data-aos="zoom-in">
             <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.l1hWr5xjX9SrW8smeWBlyAHaEK%26pid%3DApi&f=1&ipt=08d804f2c07f10923aa63fcb282e0e74ffacf1f971ce58b1d907ed404e6c4302&ipo=images" 
-                 alt="Türkistan Töre Hukuku" 
-                 class="w-full h-64 object-cover rounded-lg mb-6">
+                 alt="Türkistan Töresi" 
+                 class="w-full h-80 object-cover rounded-xl mb-8 shadow-xl">
 
-            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm">
-
-            <h2 class="text-2xl font-semibold mb-4 text-green-400">Töre Hukuku ve Temelleri</h2>
-            <p class="mb-4">
-                ✓ Gök Tanrı inancına dayanan sözlü hukuk sistemi<br>
-                ✓ Toplumsal düzen ve adalet anlayışının temel kaynağı<br>
-                ✓ Nesilden nesile aktarılan gelenek hukuku
-            </p>
-
-            <h2 class="text-2xl font-semibold mb-4 text-green-400">Kurultay'ın Rolü</h2>
-            <div class="space-y-3 mb-6">
-                <div class="flex items-start">
-                    <span class="text-green-300 mr-2">•</span>
-                    <p>Boy beyleri ve ileri gelenlerin katılımıyla yapılan toplantılar</p>
+            <div class="space-y-8">
+                <!-- Tarihsel Köken -->
+                <div class="space-y-4" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-4 text-emerald-300">🌌 Köken ve Metafizik Temeller</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-gray-300">
+                        <div class="p-4 bg-gray-700/50 rounded-lg">
+                            <p class="font-semibold text-green-400">🏹 Gök Tanrı İnancı</p>
+                            <p>Kut anlayışı ve ilahi adalet</p>
+                        </div>
+                        <div class="p-4 bg-gray-700/50 rounded-lg">
+                            <p class="font-semibold text-green-400">🗺️ Coğrafi Köken</p>
+                            <p>Orta Asya bozkır kültürü</p>
+                        </div>
+                        <div class="p-4 bg-gray-700/50 rounded-lg">
+                            <p class="font-semibold text-green-400">📜 Aktarım Yöntemi</p>
+                            <p>Sözlü gelenek ve kopuz ezgileri</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-start">
-                    <span class="text-green-300 mr-2">•</span>
-                    <p>Toplumsal sorunların tartışıldığı ve kuralların belirlendiği meclis</p>
+
+                <!-- Kurultay Sistemi -->
+                <div class="space-y-4" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold mb-4 text-emerald-300">🏛️ Kurultay Mekanizması</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-gray-700/50 rounded-xl">
+                            <h3 class="text-xl font-semibold text-green-400 mb-3">👥 Katılım Yapısı</h3>
+                            <p class="text-gray-300">
+                                • Boy beyleri ve ak sakallılar<br>
+                                • Hatunların danışma rolü<br>
+                                • Halkın temsilcileri (Toygunlar)
+                            </p>
+                        </div>
+                        <div class="p-6 bg-gray-700/50 rounded-xl">
+                            <h3 class="text-xl font-semibold text-green-400 mb-3">⚖️ Karar Alma</h3>
+                            <p class="text-gray-300">
+                                • Oybirliği (Yügrüş) prensibi<br>
+                                • Kengeş geleneği<br>
+                                • Toy törenleriyle pekiştirme
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-start">
-                    <span class="text-green-300 mr-2">•</span>
-                    <p>Evrensel hukuk kurallarının oluşturulma merkezi</p>
+
+                <!-- Hukuk Prensipleri -->
+                <div class="space-y-4" data-aos="fade-up">
+                    <h2 class="text-3xl font-bold mb-4 text-emerald-300">⚔️ Alp Esasları</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="p-4 bg-green-500/10 rounded-lg">
+                            <h3 class="text-lg font-semibold text-green-300">🎯 Töre-i Cihan</h3>
+                            <p class="text-gray-300">Evrensel adalet anlayışı</p>
+                        </div>
+                        <div class="p-4 bg-green-500/10 rounded-lg">
+                            <h3 class="text-lg font-semibold text-green-300">🤝 And İçme</h3>
+                            <p class="text-gray-300">Antlaşma kutsallığı (Ant içmek)</p>
+                        </div>
+                        <div class="p-4 bg-green-500/10 rounded-lg">
+                            <h3 class="text-lg font-semibold text-green-300">⚖️ Kısas Sistemi</h3>
+                            <p class="text-gray-300">Kan davalarında denge prensibi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarihsel Etkiler -->
+                <div class="space-y-4" data-aos="fade-up">
+                    <h2 class="text-3xl font-bold mb-4 text-emerald-300">🌍 Türk Hukuk Mirası</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-gray-700/50 rounded-xl">
+                            <h3 class="text-xl font-semibold text-green-400 mb-3">📜 Yazılı Belgeler</h3>
+                            <p class="text-gray-300">
+                                • Orhun Yazıtları'ndaki yansımalar<br>
+                                • Kutadgu Bilig'de töre felsefesi<br>
+                                • Dede Korkut Hikayeleri
+                            </p>
+                        </div>
+                        <div class="p-6 bg-gray-700/50 rounded-xl">
+                            <h3 class="text-xl font-semibold text-green-400 mb-3">🏛️ Modern Etkiler</h3>
+                            <p class="text-gray-300">
+                                • Türk Medeni Kanunu'na etkiler<br>
+                                • Mahalle kültüründe töre izleri<br>
+                                • Arabuluculuk geleneği
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <h2 class="text-2xl font-semibold mb-4 text-green-400">Adalet İlkeleri</h2>
-            <p class="mb-4">
-                Temel prensipleri:<br>
-                <span class="block mt-2 ml-4">
-                    ✓ "Eşit suça eşit ceza" ilkesi<br>
-                    ✓ Sosyal statüye bakılmaksızın adalet<br>
-                    ✓ Toplumsal barışın korunması önceliği
-                </span>
-            </p>
-
-            <h2 class="text-2xl font-semibold mb-4 text-green-400">Törenin Etkileri</h2>
-            <div class="space-y-3">
-                <div class="flex items-start">
-                    <span class="text-green-300 mr-2">•</span>
-                    <p>Türk devletlerinin uzun ömürlü olmasında kritik rol</p>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-green-300 mr-2">•</span>
-                    <p>Toplumsal birlik ve devlet gücünün temel dayanağı</p>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-green-300 mr-2">•</span>
-                    <p>Günümüz Türk hukuk kültürüne tarihsel miras</p>
-                </div>
-            </div>
-
-            <div class="mt-8">
-                <a href="/tarihprojesi" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">
-                    Geri Dön <i class="fas fa-arrow-left ml-2"></i>
+            <!-- Geri Dön Butonu -->
+            <div class="mt-12 text-center" data-aos="fade-up">
+                <a href="/tarihprojesi" class="btn-glow inline-block py-3 px-8 rounded-lg font-semibold transform transition hover:scale-105">
+                    <i class="fas fa-arrow-left mr-2"></i>Geri Dön
                 </a>
             </div>
         </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000,
+            easing: 'ease-out-quad'
+        });
+    </script>
 </body>
 </html>
